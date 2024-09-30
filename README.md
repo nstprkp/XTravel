@@ -60,5 +60,4 @@
 ### Окно с фотографиями мест для вдохновения
 ![pick6](https://github.com/user-attachments/assets/f36b3629-df3d-47ca-8266-dac0f8ee5959)
 
-## SRS
-[Requirements_Document.pdf](https://github.com/user-attachments/files/17192989/Requirements_Document.pdf)
+## SRS(https://github.com/user-attachments/files/17192989/Requirements_Document.pdf)
