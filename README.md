@@ -10,4 +10,5 @@
    Среда программирования: Android Studio
 
 ## Требования к проекту
-## [!SRS](docks/SRS.md)
+## [SRS](docks/SRS.md)
+## [event-stream](docks/event-stream.md)
