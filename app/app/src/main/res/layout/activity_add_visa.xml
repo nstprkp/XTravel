@@ -1,0 +1,100 @@
+<!-- activity_add_visa.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFE4E1"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/textViewAddVisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Добавьте свою визу"
+        android:textColor="#2C3E50"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Country"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etVisaType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Visa Type"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etIssueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Issue Date (YYYY-MM-DD)"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etExpiryDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Expiry Date (YYYY-MM-DD)"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btnSaveVisa"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter"
+        android:text="Сохранить визу"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter"
+        android:text="назад"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textStyle="bold" />
+</LinearLayout>

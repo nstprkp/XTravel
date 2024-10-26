@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_ticket_act"
+    android:orientation="vertical"
+    android:background="#FFE4E1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".winticket.AddTicketActivity">
+
+    <TextView
+        android:id="@+id/textViewAddTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Добавьте свой билет"
+        android:textColor="#2C3E50"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/tickAddCountryTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Место прибытия"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/tickAddCountryFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Место отправления"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/tickAddDataDeparture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Дата отправления (YYYY-MM-DD)"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/tickAddTimeDeparture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Время отправления (HH-MM)"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/tickAddDataArrival"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Дата прибытия (YYYY-MM-DD)"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/tickAddTimeArrival"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Время прибытия (HH-MM)"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/tickAddPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Посадочное место (введите '-' если отсутствует)"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/tickAddTransportType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Тип транспорта"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btnSaveTicket"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter"
+        android:text="Сохранить билет>"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_go_back_to_acc"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter"
+        android:text="назад"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textStyle="bold" />
+
+</LinearLayout>

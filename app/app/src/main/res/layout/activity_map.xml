@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE4E1"
+    tools:context=".winmain.MapActivity">
+
+    <TextView
+        android:id="@+id/textViewAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Routes"
+        android:textColor="#2C3E50"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_marginTop="650dp"
+        android:background="#DC74AE">
+
+        <ImageButton
+            android:id="@+id/places_button_mp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/places"
+            android:contentDescription="@string/places_description"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/picture_button_mp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/picture"
+            android:contentDescription="@string/picture_description"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/map_button_mp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/map"
+            android:contentDescription="@string/map_description"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/account_button_mp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/account"
+            android:contentDescription="@string/account_description"
+            android:background="@null" />
+    </LinearLayout>
+
+</LinearLayout>

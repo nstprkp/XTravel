@@ -1,0 +1,51 @@
+<!-- visa_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/visaclass"
+    android:background="#FFE4E1"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCountry"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#4E0E4E"
+        android:text="Country" />
+
+    <TextView
+        android:id="@+id/tvVisaType"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#4E0E4E"
+        android:text="Visa Type" />
+
+    <TextView
+        android:id="@+id/tvIssueDate"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#4E0E4E"
+        android:text="Issue Date" />
+
+    <TextView
+        android:id="@+id/tvExpiryDate"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#4E0E4E"
+        android:text="Expiry Date" />
+
+</LinearLayout>

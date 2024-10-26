@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFE4E1"
+    tools:context=".winmain.ItemsActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Интересные места"
+        android:textColor="#2C3E50"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemsList"
+        android:layout_width="match_parent"
+        android:layout_height="555dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="#DC74AE"
+        android:layout_marginTop="35dp">
+
+        <ImageButton
+            android:id="@+id/places_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/places"
+            android:contentDescription="@string/places_description"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/picture_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/picture"
+            android:contentDescription="@string/picture_description"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/map_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/map"
+            android:contentDescription="@string/map_description"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/account_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/account"
+            android:contentDescription="@string/account_description"
+            android:background="@null" />
+    </LinearLayout>
+
+</LinearLayout>
