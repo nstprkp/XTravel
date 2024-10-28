@@ -8,6 +8,8 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.app.winlog.AuthActivity
 import com.example.app.R
+import com.example.app.SavedPlacesActivity
+import com.example.app.winsaved.SavedAdapter
 import com.example.app.winticket.TicketsActivity
 import com.example.app.winvisa.VisasActivity
 
@@ -45,6 +47,12 @@ class AccountActivity : AppCompatActivity() {
         val buttonTickets: Button = findViewById(R.id.link_to_tickets)
         buttonTickets.setOnClickListener {
             val intent = Intent(this, TicketsActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonSavedPlaces: Button = findViewById(R.id.link_to_saved)
+        buttonSavedPlaces.setOnClickListener {
+            val intent = Intent(this, SavedPlacesActivity::class.java)
             startActivity(intent)
         }
 
