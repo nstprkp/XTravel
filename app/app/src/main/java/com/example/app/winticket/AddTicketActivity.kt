@@ -11,6 +11,7 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.app.R
+import com.example.app.winvisa.Visa
 
 class AddTicketActivity : AppCompatActivity() {
 
@@ -46,7 +47,8 @@ class AddTicketActivity : AppCompatActivity() {
 
             if (!userLogin.isNullOrEmpty() && fromCountry.isNotEmpty() && toCountry.isNotEmpty() && departureData.isNotEmpty() && departureTime.isNotEmpty() && arrivalData.isNotEmpty() && arrivalTime.isNotEmpty() && place.isNotEmpty() && transportType.isNotEmpty()) {
 
-                val newTicket = Ticket(
+
+                /*val newTicket = Ticket(
                     userLogin,
                     fromCountry,
                     toCountry,
@@ -54,9 +56,18 @@ class AddTicketActivity : AppCompatActivity() {
                     departureData, departureTime,
                     arrivalData, arrivalTime,
                     place
-                )
+                )*/
 
-                ticketDbHelper.addTicketForUser(newTicket)
+                val newTicket = Ticket(login = userLogin, fromCountryAndTown = fromCountry, toCountryAndTown = toCountry,
+                    transportType = transportType, departureData = departureData, departureTime = departureTime,
+                    arrivalData = arrivalData, arrivalTime = arrivalTime, place = place)
+
+                val newTicketId = ticketDbHelper.addTicketForUser(newTicket)
+
+                if (newTicketId != null) {
+                    val ticketWithId = newTicket.copy(id = newTicketId)
+                }
+
                 val intent = Intent(this, TicketsActivity::class.java)
                 startActivity(intent)
 

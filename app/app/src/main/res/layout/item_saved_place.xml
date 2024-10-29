@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="8dp">
+    android:paddingBottom="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="#FFE4E1">
 
     <ImageView
         android:id="@+id/saved_image_in_list"
+        android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
@@ -14,17 +17,23 @@
 
     <TextView
         android:id="@+id/saved_title_in_list"
-        android:layout_width="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#4E0E4E"
+        android:text="TextView"/>
 
     <TextView
         android:id="@+id/saved_desc_in_list"
-        android:layout_width="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textSize="14sp" />
+        android:textSize="20dp"
+        android:textColor="#4E0E4E"
+        android:text="TextView" />
 
 </LinearLayout>

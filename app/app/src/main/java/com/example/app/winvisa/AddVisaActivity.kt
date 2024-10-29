@@ -33,7 +33,6 @@ class AddVisaActivity : AppCompatActivity() {
             val issueDate = etIssueDate.text.toString()
             val expiryDate = etExpiryDate.text.toString()
 
-            // Проверка на заполненность всех полей
             if (!userLogin.isNullOrEmpty() && country.isNotEmpty() && visaType.isNotEmpty() && issueDate.isNotEmpty() && expiryDate.isNotEmpty()) {
                 //val newVisa = Visa(userLogin, country, visaType, issueDate, expiryDate)
 

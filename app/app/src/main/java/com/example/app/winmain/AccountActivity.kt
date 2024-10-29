@@ -8,8 +8,7 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.app.winlog.AuthActivity
 import com.example.app.R
-import com.example.app.SavedPlacesActivity
-import com.example.app.winsaved.SavedAdapter
+import com.example.app.winsaved.SavedPlacesActivity
 import com.example.app.winticket.TicketsActivity
 import com.example.app.winvisa.VisasActivity
 

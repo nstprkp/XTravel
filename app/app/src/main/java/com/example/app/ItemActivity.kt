@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.app.winmain.ItemsActivity
 import com.example.app.winsaved.SavedPlaces
@@ -37,11 +38,18 @@ class ItemActivity : AppCompatActivity() {
             val etTitle = intent.getStringExtra("itemTitle") ?: ""
             val etDesc = intent.getStringExtra("itemDesc") ?: ""
 
-            val newFavoritePlace = SavedPlaces(login = userLogin, image = etImage, title = etTitle, desc = etDesc)
-            val newFavPlaceId = savedPlacesDbHelper.addFavoritePlaceForUser(newFavoritePlace)
+            if (savedPlacesDbHelper.isPlaceFavoriteForUser(userLogin, etTitle)) {
+                Toast.makeText(this, "Place already added to favorite", Toast.LENGTH_LONG).show()
+            }
+            else {
+                val newFavoritePlace = SavedPlaces(login = userLogin, image = etImage, title = etTitle, desc = etDesc)
+                val newFavPlaceId = savedPlacesDbHelper.addFavoritePlaceForUser(newFavoritePlace)
 
-            if (newFavPlaceId != null) {
-                val favPlaceWithId = newFavoritePlace.copy(id = newFavPlaceId)
+                if (newFavPlaceId != null) {
+                    val favPlaceWithId = newFavoritePlace.copy(id = newFavPlaceId)
+                }
+
+                Toast.makeText(this, "New place added to favorite", Toast.LENGTH_LONG).show()
             }
         }
 

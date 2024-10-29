@@ -31,7 +31,7 @@ class TicketsDbHelper(val context: Context) : SQLiteOpenHelper(context, "appbdti
         onCreate(db)
     }
 
-    fun addTicketForUser(ticket: Ticket) {
+    fun addTicketForUser(ticket: Ticket): Int? {
         val values = ContentValues().apply {
             put("login", ticket.login)
             put("from_country_and_town", ticket.fromCountryAndTown)
@@ -45,8 +45,15 @@ class TicketsDbHelper(val context: Context) : SQLiteOpenHelper(context, "appbdti
         }
 
         writableDatabase.use { db ->
-            val result = db.insert("tickets", null, values)
+            val result = db.insert("tickets", null, values).toInt()
+            return if (result == -1) null else result
         }
+    }
+
+    fun deleteTicketById(id: Int) {
+        val db = this.writableDatabase
+        db.delete("tickets", "id = ?", arrayOf(id.toString()))
+        db.close()
     }
 
     @SuppressLint("Range")
@@ -57,6 +64,7 @@ class TicketsDbHelper(val context: Context) : SQLiteOpenHelper(context, "appbdti
         readableDatabase.rawQuery(query, arrayOf(login)).use { cursor ->
             if (cursor.moveToFirst()) {
                 do {
+                    val id = cursor.getInt(cursor.getColumnIndex("id"))
                     val fromCountry = cursor.getString(cursor.getColumnIndex("from_country_and_town"))
                     val toCountry = cursor.getString(cursor.getColumnIndex("to_country_and_town"))
                     val transportType = cursor.getString(cursor.getColumnIndex("transport_type"))
@@ -66,7 +74,7 @@ class TicketsDbHelper(val context: Context) : SQLiteOpenHelper(context, "appbdti
                     val arrivalTime = cursor.getString(cursor.getColumnIndex("arrival_time"))
                     val place = cursor.getString(cursor.getColumnIndex("place"))
 
-                    val ticket = Ticket(login, fromCountry, toCountry, transportType, departureData, departureTime, arrivalData, arrivalTime, place)
+                    val ticket = Ticket(id, login, fromCountry, toCountry, transportType, departureData, departureTime, arrivalData, arrivalTime, place)
                     ticketList.add(ticket)
                 } while (cursor.moveToNext())
             }

@@ -6,7 +6,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class SavedPlacesDbHelper(val context: Context) : SQLiteOpenHelper(context, "appbditem", null, 1) {
+class SavedPlacesDbHelper(val context: Context) : SQLiteOpenHelper(context, "appbditemfav", null, 1) {
 
     override fun onCreate(db: SQLiteDatabase) {
         val createSavedTable = """
@@ -67,4 +67,15 @@ class SavedPlacesDbHelper(val context: Context) : SQLiteOpenHelper(context, "app
         }
         return savedList
     }
+
+    fun isPlaceFavoriteForUser(login: String, title: String): Boolean {
+        val db = this.readableDatabase
+        val query = "SELECT * FROM saveditems WHERE login = ? AND title = ?"
+        val cursor = db.rawQuery(query, arrayOf(login, title))
+        val exists = cursor.count > 0
+        cursor.close()
+        db.close()
+        return exists
+    }
+
 }
