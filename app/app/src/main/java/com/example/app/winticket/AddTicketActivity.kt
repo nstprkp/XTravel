@@ -31,19 +31,19 @@ class AddTicketActivity : AppCompatActivity() {
         val etTransportType = findViewById<EditText>(R.id.tickAddTransportType)
 
 
-        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("unique_user_prefs", MODE_PRIVATE)
         val userLogin = sharedPreferences.getString("USER_LOGIN", "")
 
         val btnSaveTicket = findViewById<Button>(R.id.btnSaveTicket)
         btnSaveTicket.setOnClickListener {
-            val fromCountry = etFromCountry.text.toString()
-            val toCountry = etToCountry.text.toString()
-            val departureData = etDepartureData.text.toString()
-            val departureTime = etDepartureTime.text.toString()
-            val arrivalData = etArrivalData.text.toString()
-            val arrivalTime = etArrivalTime.text.toString()
-            val place = etPlace.text.toString()
-            val transportType = etTransportType.text.toString()
+            val fromCountry = etFromCountry.text.toString().trim()
+            val toCountry = etToCountry.text.toString().trim()
+            val departureData = etDepartureData.text.toString().trim()
+            val departureTime = etDepartureTime.text.toString().trim()
+            val arrivalData = etArrivalData.text.toString().trim()
+            val arrivalTime = etArrivalTime.text.toString().trim()
+            val place = etPlace.text.toString().trim()
+            val transportType = etTransportType.text.toString().trim()
 
             if (!userLogin.isNullOrEmpty() && fromCountry.isNotEmpty() && toCountry.isNotEmpty() && departureData.isNotEmpty() && departureTime.isNotEmpty() && arrivalData.isNotEmpty() && arrivalTime.isNotEmpty() && place.isNotEmpty() && transportType.isNotEmpty()) {
 

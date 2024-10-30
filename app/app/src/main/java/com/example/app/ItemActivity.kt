@@ -15,7 +15,7 @@ class ItemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item)
 
-        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("unique_user_prefs", MODE_PRIVATE)
         val userLogin = sharedPreferences.getString("USER_LOGIN", "") ?: ""
 
         val savedPlacesDbHelper = SavedPlacesDbHelper(this)
@@ -39,7 +39,7 @@ class ItemActivity : AppCompatActivity() {
             val etDesc = intent.getStringExtra("itemDesc") ?: ""
 
             if (savedPlacesDbHelper.isPlaceFavoriteForUser(userLogin, etTitle)) {
-                Toast.makeText(this, "Place already added to favorite", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Место уже добавлено в избранное", Toast.LENGTH_LONG).show()
             }
             else {
                 val newFavoritePlace = SavedPlaces(login = userLogin, image = etImage, title = etTitle, desc = etDesc)
@@ -49,7 +49,7 @@ class ItemActivity : AppCompatActivity() {
                     val favPlaceWithId = newFavoritePlace.copy(id = newFavPlaceId)
                 }
 
-                Toast.makeText(this, "New place added to favorite", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Новое место добавлено в избранное", Toast.LENGTH_LONG).show()
             }
         }
 

@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.app.R
 import com.example.app.winmain.ItemsActivity
+import kotlin.math.log
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,18 +43,22 @@ class MainActivity : ComponentActivity() {
             val email = userEmail.text.toString().trim()
             val password = userPassword.text.toString().trim()
 
-            if (login == "" || email == "" || password == "") {
-                Toast.makeText(this, "Empty!", Toast.LENGTH_LONG).show()
+            if (login == "" || email == "" || password == "" || password.length < 8) {
+                if (password.length < 8) {
+                    Toast.makeText(this, "Пароль должен быть не менее 8 символов!", Toast.LENGTH_LONG).show()
+                }
+                Toast.makeText(this, "Пожалуйста, заполните все поля!", Toast.LENGTH_LONG).show()
             }
             else {
 
                 val db = DbHelper(this)
                 if (db.isUserExists(login)) {
-                    Toast.makeText(this, "User with this login already exists!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Пользователь с таким логином уже существует!", Toast.LENGTH_LONG).show()
                 } else {
+
                     val user = User(login, email, password)
                     db.addUser(user)
-                    Toast.makeText(this, "User $login added", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Пользователь $login добавлен", Toast.LENGTH_LONG).show()
 
                     userLogin.text.clear()
                     userEmail.text.clear()

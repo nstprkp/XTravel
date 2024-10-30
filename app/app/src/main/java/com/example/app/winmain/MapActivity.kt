@@ -1,12 +1,16 @@
 package com.example.app.winmain
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.example.app.wintrack.AddTrackActivity
 import com.example.app.R
 
 class MapActivity: AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
@@ -26,6 +30,12 @@ class MapActivity: AppCompatActivity() {
         }
         buttonGoToPlaces.setOnClickListener {
             val intent = Intent(this, PlacesActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonAddTrack: Button = findViewById(R.id.add_track_button)
+        buttonAddTrack.setOnClickListener {
+            val intent = Intent(this, AddTrackActivity::class.java)
             startActivity(intent)
         }
     }

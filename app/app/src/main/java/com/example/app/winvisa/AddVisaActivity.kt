@@ -22,29 +22,31 @@ class AddVisaActivity : AppCompatActivity() {
         val etVisaType = findViewById<EditText>(R.id.etVisaType)
         val etIssueDate = findViewById<EditText>(R.id.etIssueDate)
         val etExpiryDate = findViewById<EditText>(R.id.etExpiryDate)
-        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("unique_user_prefs", MODE_PRIVATE)
         val userLogin = sharedPreferences.getString("USER_LOGIN", "")
 
 
         val btnSaveVisa = findViewById<Button>(R.id.btnSaveVisa)
         btnSaveVisa.setOnClickListener {
-            val country = etCountry.text.toString()
-            val visaType = etVisaType.text.toString()
-            val issueDate = etIssueDate.text.toString()
-            val expiryDate = etExpiryDate.text.toString()
+            val country = etCountry.text.toString().trim()
+            val visaType = etVisaType.text.toString().trim()
+            val issueDate = etIssueDate.text.toString().trim()
+            val expiryDate = etExpiryDate.text.toString().trim()
 
-            if (!userLogin.isNullOrEmpty() && country.isNotEmpty() && visaType.isNotEmpty() && issueDate.isNotEmpty() && expiryDate.isNotEmpty()) {
+            if (country != "" && visaType != "" && issueDate != "" && expiryDate != "") {
                 //val newVisa = Visa(userLogin, country, visaType, issueDate, expiryDate)
 
-                val newVisa = Visa(login = userLogin, country = country, visaType = visaType, issueDate = issueDate, expiryDate = expiryDate)
-                val newVisaId = visasDbHelper.addVisaForUser(newVisa)
+                if (!userLogin.isNullOrBlank()) {
+                    val newVisa = Visa(login = userLogin, country = country, visaType = visaType, issueDate = issueDate, expiryDate = expiryDate)
+                    val newVisaId = visasDbHelper.addVisaForUser(newVisa)
 
-                if (newVisaId != null) {
-                    val visaWithId = newVisa.copy(id = newVisaId)
+                    if (newVisaId != null) {
+                        val visaWithId = newVisa.copy(id = newVisaId)
+                    }
+
+                    val intent = Intent(this, VisasActivity::class.java)
+                    startActivity(intent)
                 }
-
-                val intent = Intent(this, VisasActivity::class.java)
-                startActivity(intent)
 
             } else {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()

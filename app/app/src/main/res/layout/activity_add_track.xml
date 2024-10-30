@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addTrackAct"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE4E1"
+    android:padding="16dp"
+    tools:context=".wintrack.AddTrackActivity">
+
+    <TextView
+        android:id="@+id/textViewAddVisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Добавьте свой маршрут"
+        android:textColor="#2C3E50"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etStartOfTrack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Добавьте начало маршрута"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etFinishOfTrack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Добавьте конец маршрута"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/textForAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Добавьте точки остановок на маршруте"
+        android:textColor="#2C3E50"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etStopPoint1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Добавьте 1 точку остановки"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etStopPoint2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Добавьте 2 точку остановки"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etStopPoint3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Добавьте 3 точку остановки"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etStopPoint4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Добавьте 4 точку остановки"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etStopPoint5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="#34495E"
+        android:textSize="18sp"
+        android:hint="Добавьте 5 точку остановки"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/textForHelpInAdd"
+        android:layout_width="809dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Внимание! Можно добавить до 5 точек остановок на маршруте. \nЕсли у вас точек останова меньше, оставляйте поля пустыми"
+        android:textColor="#90384F"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSaveTrack"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter"
+        android:text="Сохранить маршрут"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_go_back_to_track"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter"
+        android:text="назад"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textStyle="bold" />
+
+</LinearLayout>

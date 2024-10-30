@@ -30,14 +30,14 @@ class AuthActivity : AppCompatActivity() {
             val password = userPassword.text.toString().trim()
 
             if (login == "" || password == "") {
-                Toast.makeText(this, "Empty!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Пожалуйста, заполните все поля!", Toast.LENGTH_LONG).show()
             }
             else {
                 val db = DbHelper(this)
                 val isAuth = db.getUser(login, password)
 
                 if (isAuth) {
-                    Toast.makeText(this, "User $login authorizated", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Вход $login выполнен успешно!", Toast.LENGTH_LONG).show()
                     userLogin.text.clear()
                     userPassword.text.clear()
 
@@ -56,7 +56,7 @@ class AuthActivity : AppCompatActivity() {
                     val intent = Intent(this, ItemsActivity::class.java)
                     startActivity(intent)
                 } else {
-                    Toast.makeText(this, "User $login not authorizated", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Пользователь $login не авторизован!", Toast.LENGTH_LONG).show()
                 }
 
             }

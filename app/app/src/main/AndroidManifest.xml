@@ -17,6 +17,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".wintrack.AddTrackActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckActivity"
             android:exported="true" />
         <activity
