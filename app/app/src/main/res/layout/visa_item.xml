@@ -4,48 +4,74 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:id="@+id/visaclass"
-    android:background="#FFE4E1"
-    android:padding="16dp">
+    android:background="@drawable/background_card"
+    android:elevation="6dp"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:layout_gravity="center">
 
     <TextView
         android:id="@+id/tvCountry"
-        android:paddingHorizontal="0dp"
-        android:paddingVertical="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
         android:textColor="#4E0E4E"
-        android:text="Country" />
+        android:text="Country"
+        android:gravity="center"
+        android:drawableStart="@drawable/ic_visa"
+        android:drawablePadding="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
 
     <TextView
         android:id="@+id/tvVisaType"
-        android:paddingHorizontal="0dp"
-        android:paddingVertical="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textColor="#4E0E4E"
-        android:text="Visa Type" />
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#3A3A3A"
+        android:text="Visa Type"
+        android:drawablePadding="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
 
     <TextView
         android:id="@+id/tvIssueDate"
-        android:paddingHorizontal="0dp"
-        android:paddingVertical="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textColor="#4E0E4E"
-        android:text="Issue Date" />
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#3A3A3A"
+        android:text="Issue Date"
+        android:drawablePadding="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
 
     <TextView
         android:id="@+id/tvExpiryDate"
-        android:paddingHorizontal="0dp"
-        android:paddingVertical="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textColor="#4E0E4E"
-        android:text="Expiry Date" />
-
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#3A3A3A"
+        android:text="Expiry Date"
+        android:drawablePadding="8dp" />
 </LinearLayout>

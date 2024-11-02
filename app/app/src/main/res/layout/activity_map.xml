@@ -8,7 +8,7 @@
     tools:context=".winmain.MapActivity">
 
     <TextView
-        android:id="@+id/textViewAccount"
+        android:id="@+id/textViewRoutes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -20,6 +20,15 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tracksList"
+        android:layout_width="364dp"
+        android:layout_height="554dp"
+        android:layout_below="@id/textViewRoutes"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="73dp"
+        android:layout_alignParentBottom="true" />
 
     <Button
         android:id="@+id/add_track_button"
