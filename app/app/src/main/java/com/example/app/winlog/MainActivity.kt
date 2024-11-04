@@ -25,8 +25,6 @@ class MainActivity : ComponentActivity() {
             setContentView(R.layout.activity_main)
         }
 
-
-
         val userLogin: EditText = findViewById(R.id.user_id);
         val userEmail: EditText = findViewById(R.id.email_id);
         val userPassword: EditText = findViewById(R.id.password_id);

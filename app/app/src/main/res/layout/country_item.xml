@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_marginBottom="4dp"
+    android:gravity="center_vertical"
+    android:background="#FFF1F1">
+
+    <TextView
+        android:id="@+id/countryNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:fontFamily="@font/inter"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:paddingEnd="8dp"
+        android:text="Country Name" />
+
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбрать"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textSize="14sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:elevation="2dp"/>
+</LinearLayout>

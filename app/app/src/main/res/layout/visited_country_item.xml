@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="#FFFFFF"
+    android:layout_margin="4dp"
+    android:elevation="2dp"
+    android:backgroundTint="#FFF5F5">
+
+    <TextView
+        android:id="@+id/countryNameVisited"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#4E0E4E"
+        android:text="To place"
+        android:gravity="center"
+        android:drawableStart="@drawable/ic_start_location"
+        android:drawablePadding="2dp" />
+
+</LinearLayout>

@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFE4E1"
-    tools:context=".winmain.PlacesActivity">
+    tools:context=".winmain.MapActivity">
 
     <TextView
-        android:id="@+id/textViewAccount"
+        android:id="@+id/textViewVisitedPlaces"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="25dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Visited Places"
+        android:text="Посещенные страны"
         android:textColor="#2C3E50"
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/visited_places_List"
+        android:layout_width="364dp"
+        android:layout_height="554dp"
+        android:layout_below="@id/textViewVisitedPlaces"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="73dp"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:id="@+id/add_visited_place_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/inter"
+        android:text="Add"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <LinearLayout
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_weight="1"
-        android:layout_marginTop="650dp"
         android:background="#DC74AE">
 
         <ImageButton
@@ -67,4 +91,4 @@
             android:background="@null" />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

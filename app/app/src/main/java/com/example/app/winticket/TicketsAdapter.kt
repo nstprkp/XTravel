@@ -29,13 +29,13 @@ class TicketsAdapter(private val ticketList: List<Ticket>, var context: Context)
     override fun onBindViewHolder(holder: TicketsViewHolder, position: Int) {
         val ticket = ticketList[position]
         holder.tickToCountry.text = ticket.toCountryAndTown
-        holder.tickFromCountry.text = "From: ${ticket.fromCountryAndTown}"
-        holder.tickTransportType.text = "Transport Type: ${ticket.departureData}"
-        holder.tickPlace.text = "Place: ${ticket.place}"
-        holder.tickDepartureData.text = "Departure Data: ${ticket.departureData}"
-        holder.tickDepartureTime.text = "Departure Time: ${ticket.departureTime}"
-        holder.tickArrivalData.text = "Arrival Data: ${ticket.arrivalData}"
-        holder.tickArrivalTime.text = "Arrival Time: ${ticket.arrivalTime}"
+        holder.tickFromCountry.text = "Откуда: ${ticket.fromCountryAndTown}"
+        holder.tickTransportType.text = "Тип транспорта: ${ticket.transportType}"
+        holder.tickPlace.text = "Посадочное место: ${ticket.place}"
+        holder.tickDepartureData.text = "Дата отправления: ${ticket.departureData}"
+        holder.tickDepartureTime.text = "Время отправления: ${ticket.departureTime}"
+        holder.tickArrivalData.text = "Дата прибытия: ${ticket.arrivalData}"
+        holder.tickArrivalTime.text = "Время прибытия: ${ticket.arrivalTime}"
     }
 
     override fun getItemCount() = ticketList.size

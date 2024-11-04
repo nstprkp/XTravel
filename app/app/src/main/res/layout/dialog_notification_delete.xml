@@ -17,7 +17,7 @@
         android:id="@+id/dialog_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вы уверены что хотите удалить визу?\n Это действие не обратимо"
+        android:text="Вы уверены что хотите удалить?\n Это действие не обратимо"
         android:textSize="18sp"
         android:textColor="#FF4081"
         android:layout_marginTop="10dp"

@@ -134,7 +134,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/inter"
-        android:text="Сохранить билет>"
+        android:text="Сохранить билет"
         android:textSize="15sp"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_background"

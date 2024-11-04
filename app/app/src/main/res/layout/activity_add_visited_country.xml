@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE4E1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Поиск стран" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/countryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="16dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBackToMap"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/inter"
+        android:text="Вернуться назад"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textStyle="bold" />
+</FrameLayout>

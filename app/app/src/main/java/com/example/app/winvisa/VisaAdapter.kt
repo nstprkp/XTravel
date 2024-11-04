@@ -25,9 +25,9 @@ class VisaAdapter(private val visaList: MutableList<Visa>, var context: Context)
     override fun onBindViewHolder(holder: VisaViewHolder, position: Int) {
         val visa = visaList[position]
         holder.tvCountry.text = visa.country
-        holder.tvVisaType.text = "Visa Type: ${visa.visaType}"
-        holder.tvIssueDate.text = "Issue Date: ${visa.issueDate}"
-        holder.tvExpiryDate.text = "Expiry Date: ${visa.expiryDate}"
+        holder.tvVisaType.text = "Тип визы: ${visa.visaType}"
+        holder.tvIssueDate.text = "Дата начала: ${visa.issueDate}"
+        holder.tvExpiryDate.text = "Дата окончания: ${visa.expiryDate}"
     }
 
     override fun getItemCount() = visaList.size

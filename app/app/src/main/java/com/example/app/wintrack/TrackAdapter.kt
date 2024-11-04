@@ -25,8 +25,8 @@ class TrackAdapter(private val trackList: List<Track>, var context: Context) : R
     override fun onBindViewHolder(holder: TrackViewHolder, position: Int) {
         val track = trackList[position]
 
-        holder.startLocation.text = "Start: ${track.startLocation}"
-        holder.endLocation.text = "End: ${track.endLocation}"
+        holder.startLocation.text = "Начало маршрута: ${track.startLocation}"
+        holder.endLocation.text = "Конец маршрута: ${track.endLocation}"
 
         holder.stopsContainer.removeAllViews()
 
