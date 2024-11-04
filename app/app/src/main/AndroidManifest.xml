@@ -16,15 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
+        <activity android:name=".ConvertActivity"
+            android:exported="false" />
         <activity
             android:name=".winvisited.AddVisitedCountryActivity"
             android:exported="false" />
         <activity
             android:name=".wintrack.AddTrackActivity"
             android:exported="false" />
-        <activity
-            android:name=".CheckActivity"
-            android:exported="true" />
         <activity
             android:name=".winsaved.SavedPlacesActivity"
             android:exported="false" />

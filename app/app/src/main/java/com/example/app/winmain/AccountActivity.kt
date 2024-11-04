@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.example.app.ConvertActivity
 import com.example.app.winlog.AuthActivity
 import com.example.app.R
 import com.example.app.winsaved.SavedPlacesActivity
@@ -52,6 +53,12 @@ class AccountActivity : AppCompatActivity() {
         val buttonSavedPlaces: Button = findViewById(R.id.link_to_saved)
         buttonSavedPlaces.setOnClickListener {
             val intent = Intent(this, SavedPlacesActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonConvert: Button = findViewById(R.id.link_to_convert)
+        buttonConvert.setOnClickListener {
+            val intent = Intent(this, ConvertActivity::class.java)
             startActivity(intent)
         }
 
