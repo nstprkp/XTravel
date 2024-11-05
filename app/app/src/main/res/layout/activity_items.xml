@@ -24,8 +24,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/itemsList"
-        android:layout_width="364dp"
-        android:layout_height="554dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/textViewInteresting"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"

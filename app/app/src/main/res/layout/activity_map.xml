@@ -22,8 +22,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tracksList"
-        android:layout_width="364dp"
-        android:layout_height="554dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/textViewRoutes"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
